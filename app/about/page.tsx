@@ -6,7 +6,7 @@ import { StarRating } from "@/components/ui/star-rating";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import Image from "next/image";
-import { Check, Award, Leaf, Heart } from "lucide-react";
+import { Check, Award, Heart, ShoppingBag } from "lucide-react";
 
 export const metadata = { title: "About Us" };
 
@@ -21,31 +21,33 @@ export default function AboutPage() {
 
       <Container className="pb-16">
         <div className="grid items-center gap-10 py-12 md:grid-cols-2 lg:gap-16">
-          <div className="relative aspect-[4/3] overflow-hidden rounded-xl border border-border">
-            <Image src="/banners/about.jpg" alt="About Otanwa Commerce" fill className="object-cover" sizes="50vw" />
+          <div className="relative aspect-[4/3] overflow-hidden rounded-xl border border-border shadow-sm">
+            <Image src="/banners/about.svg" alt={`About ${company.name}`} fill className="object-cover" sizes="50vw" />
           </div>
           <PageSection title="Our Story">
             <p>
-              Otanwa Commerce was founded with a simple belief: the towels and linens you use every day
-              should feel exceptional. What started as a small family operation in Portland, Oregon has
-              grown into a trusted name for premium home textiles across the United States.
+              AAM Partners LLC was founded with a simple mission: make online shopping easier for
+              families by bringing together quality products across every category in one trusted
+              marketplace. From electronics and home essentials to toys, beauty, and pet supplies —
+              we curate products that deliver real value.
             </p>
             <p className="mt-4">
-              We work directly with skilled manufacturers to source the finest long-staple cotton,
-              ensuring every product meets our standards for softness, absorbency, and longevity.
-              Every item in our collection is designed to get better with time — not wear out.
+              Based in Virginia Beach, Virginia, we work with reliable suppliers to offer competitive
+              prices without compromising on quality. Every product in our catalog is selected with
+              care, and our team is dedicated to making your shopping experience smooth from browsing
+              to checkout.
             </p>
           </PageSection>
         </div>
 
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {[
-            { icon: Award, title: "Premium Quality", desc: "600 GSM cotton and OEKO-TEX certified materials on every product." },
-            { icon: Leaf, title: "Sustainably Sourced", desc: "Ethically manufactured with eco-conscious packaging and shipping." },
+            { icon: ShoppingBag, title: "Wide Selection", desc: "12+ categories covering everything your home and family needs." },
+            { icon: Award, title: "Trusted Quality", desc: "Every product is carefully vetted for quality, value, and reliability." },
             { icon: Heart, title: "Customer First", desc: "30-day returns, responsive support, and a satisfaction guarantee." },
-            { icon: Check, title: "Built to Last", desc: "Double-stitched hems and colorfast dyes that survive hundreds of washes." },
+            { icon: Check, title: "Easy Shopping", desc: "One marketplace, one checkout — no jumping between multiple stores." },
           ].map(({ icon: Icon, title, desc }) => (
-            <div key={title} className="rounded-lg border border-border bg-white p-6 text-center">
+            <div key={title} className="rounded-xl border border-border bg-card p-6 text-center shadow-sm">
               <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-primary/10">
                 <Icon className="h-5 w-5 text-primary" />
               </div>
@@ -56,9 +58,9 @@ export default function AboutPage() {
         </div>
 
         <PageSection title="What Our Customers Say" className="mt-16">
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
             {testimonials.map((t) => (
-              <div key={t.id} className="rounded-lg border border-border bg-white p-6">
+              <div key={t.id} className="rounded-xl border border-border bg-card p-6 shadow-sm">
                 <StarRating rating={t.rating} showCount={false} size="md" />
                 <p className="mt-4 text-sm leading-relaxed text-muted-foreground">&ldquo;{t.text}&rdquo;</p>
                 <p className="mt-4 text-sm font-medium">{t.name}</p>

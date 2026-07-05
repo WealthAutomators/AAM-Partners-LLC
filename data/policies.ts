@@ -2,14 +2,9 @@ import { company } from "./company";
 
 export const faqItems = [
   {
-    question: "What materials are Otanwa Commerce towels made from?",
+    question: "What types of products does AAM Partners LLC sell?",
     answer:
-      "Our towels are crafted from premium long-staple cotton, organic cotton, micro-cotton blends, and bamboo rayon depending on the product. Every material is OEKO-TEX certified and selected for softness, absorbency, and durability.",
-  },
-  {
-    question: "How should I care for my towels?",
-    answer:
-      "Machine wash warm with like colors. Avoid fabric softener as it reduces absorbency over time. Tumble dry on low or medium heat. Do not bleach. For best results, wash new towels once before first use to remove any manufacturing residue.",
+      "We offer a wide range of products across 12+ categories including electronics, home & kitchen, bathroom essentials, beauty & personal care, toys & games, pet supplies, sports & outdoors, office supplies, health & wellness, baby products, and fashion accessories.",
   },
   {
     question: "Do you offer free shipping?",
@@ -24,7 +19,7 @@ export const faqItems = [
   {
     question: "What is your return policy?",
     answer:
-      "We accept returns within 30 days of delivery. Items must be unused, unwashed, and in original packaging with tags attached. Visit our Returns page for step-by-step instructions or contact our support team for assistance.",
+      "We accept returns within 30 days of delivery. Items must be unused and in original packaging with tags attached. Visit our Returns page for step-by-step instructions or contact our support team for assistance.",
   },
   {
     question: "Can I track my order?",
@@ -37,9 +32,9 @@ export const faqItems = [
       "Currently, we ship within the United States only, including Alaska and Hawaii. International shipping is planned for a future expansion. Sign up for our newsletter to be notified when it becomes available.",
   },
   {
-    question: "Are your products ethically made?",
+    question: "Are your products quality-checked?",
     answer:
-      "Absolutely. We partner with manufacturers who meet strict ethical and environmental standards. All cotton is responsibly sourced, and our facilities undergo regular third-party audits for fair labor practices.",
+      "Absolutely. We partner with trusted suppliers and carefully curate every product in our marketplace. Each item is selected for quality, value, and reliability before being listed on our site.",
   },
   {
     question: "How do I use a coupon code?",
@@ -51,11 +46,16 @@ export const faqItems = [
     answer:
       "We accept Visa, Mastercard, American Express, PayPal, and Apple Pay. All transactions are encrypted and processed securely. Note: our checkout is currently in demo mode and does not process real payments.",
   },
+  {
+    question: "How can I contact customer support?",
+    answer:
+      `Our support team is available Monday through Friday, 9am–6pm EST. Email us at ${company.email} or use the contact form on our website. We typically respond within one business day.`,
+  },
 ];
 
 export const shippingPolicy = {
   title: "Shipping Policy",
-  description: "Everything you need to know about how we deliver your Otanwa Commerce orders.",
+  description: "Everything you need to know about how we deliver your AAM Partners LLC orders.",
   sections: [
     {
       title: "Processing Time",
@@ -90,12 +90,12 @@ export const shippingPolicy = {
 
 export const returnPolicy = {
   title: "Return Policy",
-  description: "We want you to love every Otanwa Commerce purchase. If you're not satisfied, we're here to help.",
+  description: "We want you to love every AAM Partners LLC purchase. If you're not satisfied, we're here to help.",
   sections: [
     {
       title: "30-Day Return Window",
       content:
-        "You may return most items within 30 days of delivery for a full refund or exchange. Items must be unused, unwashed, and in their original packaging with all tags attached.",
+        "You may return most items within 30 days of delivery for a full refund or exchange. Items must be unused and in their original packaging with all tags attached.",
     },
     {
       title: "How to Start a Return",
@@ -113,7 +113,7 @@ export const returnPolicy = {
       content: "",
       list: [
         "Items marked as final sale",
-        "Used, washed, or altered products",
+        "Used or altered products",
         "Items without original packaging or tags",
         "Gift cards",
       ],
@@ -128,12 +128,12 @@ export const returnPolicy = {
 
 export const refundPolicy = {
   title: "Refund Policy",
-  description: "Our commitment to fair and transparent refunds for every Otanwa Commerce order.",
+  description: "Our commitment to fair and transparent refunds for every AAM Partners LLC order.",
   sections: [
     {
       title: "Refund Eligibility",
       content:
-        "Refunds are available for items returned within 30 days of delivery in unused, unwashed condition with original packaging and tags. Sale items are eligible for refund unless marked as final sale.",
+        "Refunds are available for items returned within 30 days of delivery in unused condition with original packaging and tags. Sale items are eligible for refund unless marked as final sale.",
     },
     {
       title: "Refund Processing Time",
@@ -163,7 +163,7 @@ export const refundPolicy = {
 
 export const privacyPolicy = {
   title: "Privacy Policy",
-  description: "Last updated: January 1, 2026. How Otanwa Commerce collects, uses, and protects your information.",
+  description: "Last updated: January 1, 2026. How AAM Partners LLC collects, uses, and protects your information.",
   sections: [
     {
       title: "Information We Collect",
@@ -195,7 +195,7 @@ export const privacyPolicy = {
     {
       title: "Your Rights",
       content:
-        "You may request access to, correction of, or deletion of your personal data at any time by contacting us at " + company.email + ". California residents have additional rights under the CCPA.",
+        "You may request access to, correction of, or deletion of your personal data at any time by contacting us at " + company.email + ". Virginia residents have additional rights under applicable state privacy laws.",
     },
     {
       title: "Contact",
@@ -206,12 +206,12 @@ export const privacyPolicy = {
 
 export const termsPolicy = {
   title: "Terms & Conditions",
-  description: "Please read these terms carefully before using the Otanwa Commerce website.",
+  description: "Please read these terms carefully before using the AAM Partners LLC website.",
   sections: [
     {
       title: "Acceptance of Terms",
       content:
-        "By accessing and using the Otanwa Commerce website, you agree to be bound by these Terms and Conditions. If you do not agree, please do not use our website.",
+        "By accessing and using the AAM Partners LLC website, you agree to be bound by these Terms and Conditions. If you do not agree, please do not use our website.",
     },
     {
       title: "Products & Pricing",
@@ -226,17 +226,17 @@ export const termsPolicy = {
     {
       title: "Intellectual Property",
       content:
-        "All content on this website — including text, images, logos, and design — is the property of Otanwa Commerce and protected by copyright and trademark laws. You may not reproduce, distribute, or use our content without written permission.",
+        "All content on this website — including text, images, logos, and design — is the property of AAM Partners LLC and protected by copyright and trademark laws. You may not reproduce, distribute, or use our content without written permission.",
     },
     {
       title: "Limitation of Liability",
       content:
-        "Otanwa Commerce shall not be liable for any indirect, incidental, or consequential damages arising from your use of our website or products. Our total liability shall not exceed the amount you paid for the product in question.",
+        "AAM Partners LLC shall not be liable for any indirect, incidental, or consequential damages arising from your use of our website or products. Our total liability shall not exceed the amount you paid for the product in question.",
     },
     {
       title: "Governing Law",
       content:
-        "These terms are governed by the laws of the State of Oregon, United States. Any disputes shall be resolved in the courts of Multnomah County, Oregon.",
+        "These terms are governed by the laws of the Commonwealth of Virginia, United States. Any disputes shall be resolved in the courts of Virginia Beach, Virginia.",
     },
   ],
 };

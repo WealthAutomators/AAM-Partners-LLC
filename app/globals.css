@@ -1,16 +1,19 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #1a1a1a;
-  --primary: #1b4332;
+  --background: #fafafa;
+  --foreground: #1f2937;
+  --primary: #7c3aed;
   --primary-foreground: #ffffff;
-  --accent: #c9a227;
+  --accent: #f59e0b;
   --accent-foreground: #ffffff;
-  --muted: #f5f5f0;
+  --pink: #ec4899;
+  --muted: #f3f4f6;
   --muted-foreground: #6b7280;
-  --border: #e5e5e0;
-  --ring: #1b4332;
+  --border: #e5e7eb;
+  --ring: #7c3aed;
+  --card: #ffffff;
+  --radius: 12px;
 }
 
 @theme inline {
@@ -20,11 +23,15 @@
   --color-primary-foreground: var(--primary-foreground);
   --color-accent: var(--accent);
   --color-accent-foreground: var(--accent-foreground);
+  --color-pink: var(--pink);
   --color-muted: var(--muted);
   --color-muted-foreground: var(--muted-foreground);
   --color-border: var(--border);
   --color-ring: var(--ring);
+  --color-card: var(--card);
   --font-sans: var(--font-inter);
+  --radius-lg: 12px;
+  --radius-xl: 12px;
 }
 
 body {
@@ -55,12 +62,10 @@ body {
   margin-top: 1rem;
 }
 
-/* Smooth page feel */
 html {
   scroll-behavior: smooth;
 }
 
-/* Prevent horizontal overflow */
 body {
   overflow-x: hidden;
 }

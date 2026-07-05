@@ -1,9 +1,11 @@
 export const brandColors = {
-  primary: "#1B4332",
-  accent: "#C9A227",
-  background: "#FFFFFF",
-  muted: "#F5F5F0",
-  border: "#E5E5E0",
-  foreground: "#1A1A1A",
+  primary: "#7C3AED",
+  secondary: "#F59E0B",
+  accent: "#EC4899",
+  background: "#FAFAFA",
+  card: "#FFFFFF",
+  muted: "#F3F4F6",
+  border: "#E5E7EB",
+  foreground: "#1F2937",
   mutedForeground: "#6B7280",
 };

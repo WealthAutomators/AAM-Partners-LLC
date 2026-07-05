@@ -12,21 +12,21 @@ const LAST_INITIALS = "ABCDEFGHJKLMNPRSTW";
 const REVIEW_PHOTOS = Array.from({ length: 8 }, (_, i) => `/reviews/review-${i + 1}.jpg`);
 
 const REVIEW_TITLES_5 = [
-  "Absolutely love these",
+  "Absolutely love this",
   "Best purchase I've made",
   "Exceeded my expectations",
   "Worth every penny",
-  "So soft and luxurious",
   "Perfect quality",
   "Will buy again",
   "Highly recommend",
   "Exactly what I needed",
-  "Outstanding quality",
+  "Outstanding product",
   "My new favorite",
   "Couldn't be happier",
-  "Fantastic product",
+  "Fantastic find",
   "Great value for the price",
   "Surpassed expectations",
+  "Works perfectly",
 ];
 
 const REVIEW_TITLES_4 = [
@@ -49,30 +49,33 @@ const REVIEW_TITLES_3 = [
 ];
 
 const BODIES_5 = [
-  "I've gone through a lot of towels over the years and these are by far the best. They're incredibly absorbent and stay soft after multiple washes. Already ordered a second set for the guest bathroom.",
-  "Bought these after reading the reviews and I'm so glad I did. The quality is immediately noticeable — thick, plush, and they dry quickly. My whole family loves them.",
-  "We replaced all our old towels with these and the difference is night and day. They feel like something you'd find at a nice hotel. Washing instructions were easy to follow.",
-  "I've had these for about two months now and they still look and feel brand new. No fading, no thinning. The color is exactly as shown. Very impressed with Otanwa Commerce.",
-  "Gifted a set to my mom and she called me twice to say how much she loves them. That says it all. Ordering more for myself now.",
-  "The absorbency on these is incredible. I have thick hair and one of these towels actually dries it properly. Haven't found that with other brands.",
-  "Quality you can feel the moment you pick them up. Stitched well, no loose threads, and they fluff up beautifully in the dryer. 10/10 would recommend.",
-  "Our old towels were scratchy and worn out. These are the complete opposite — soft, substantial, and they actually get softer with each wash. Very happy customer.",
-  "I was skeptical about ordering towels online but these delivered. Literally. Fast shipping and the product quality is top notch. Already on my third wash cycle with zero issues.",
-  "Perfect weight — not too heavy, not too thin. They hang nicely on the rack and dry between uses without getting that musty smell. Details matter and Otanwa nailed it.",
+  "Ordered this along with a few other items and everything arrived well-packaged. Quality is exactly what you'd expect from a premium marketplace. Already planning my next order.",
+  "I've compared prices across several sites and this was the best deal. Product works flawlessly and shipping was faster than expected. Very impressed with AAM Partners.",
+  "Bought this as a gift and the recipient loved it. Packaging was neat, product feels premium, and it works exactly as described. Will definitely shop here again.",
+  "This has become a daily essential in our household. Build quality is solid, setup was easy, and it performs better than products I've paid twice as much for elsewhere.",
+  "Wasn't sure about ordering online but this exceeded all expectations. Arrived in two days, works perfectly out of the box, and customer support answered my pre-purchase questions quickly.",
+  "Third time ordering from AAM Partners and they never disappoint. Consistent quality, fair prices, and reliable shipping every single time. Highly recommend.",
+  "The product photos don't do it justice — it's even better in person. Sturdy construction, thoughtful design details, and great value for what you get.",
+  "Perfect for what I needed. Easy to use, well-made, and the price point is very competitive. My whole family has been using it daily since it arrived.",
+  "I read a lot of reviews before buying and I'm glad I went with this one. Does everything it promises and then some. Five stars without hesitation.",
+  "Fast delivery, great packaging, and a product that actually lives up to the description. It's rare to find all three — AAM Partners nailed it.",
+  "Replaced an older version of a similar product and this is a massive upgrade. Better materials, better performance, and it looks great too.",
+  "Ordered during a sale and still would have been happy at full price. Quality is top-notch and it integrated seamlessly into my daily routine.",
 ];
 
 const BODIES_4 = [
-  "Really nice towels overall. Soft and absorbent. Took a little longer to ship than expected but the product itself is great. Would still recommend.",
-  "Good quality for the price. They're soft and hold up well in the wash. Only reason for 4 stars instead of 5 is they're slightly smaller than I imagined from the photos.",
-  "Very pleased with the purchase. The color is beautiful and they feel luxurious. Lost one star because one towel had a small loose thread, but customer service was responsive.",
-  "Solid towels that do the job well. Absorbent and soft. My only note is they shed a little on the first wash, but that's normal for new terry. Much better after the second wash.",
-  "Happy with these. Good thickness and they dry fast. Would have given 5 stars if the packaging was a bit nicer for gifting, but the product itself is excellent.",
+  "Really happy with this purchase overall. Product quality is great and it works as expected. Took an extra day to ship but arrived in good condition.",
+  "Good product for the price. Does what it's supposed to do well. Only minor complaint is the instruction manual could be clearer, but setup was still manageable.",
+  "Solid quality and fast delivery. Gave 4 stars instead of 5 because it's slightly smaller than I imagined from the photos, but functionally it's excellent.",
+  "Very pleased with the purchase. Works great and looks good. One small cosmetic imperfection on arrival but nothing that affects performance.",
+  "Good value and reliable performance. Would recommend to others. Shipping was a bit slower than the estimate but the product itself is worth the wait.",
+  "Nice product that meets expectations. Quality materials and decent packaging. Lost one star because I wish there were more color options available.",
 ];
 
 const BODIES_3 = [
-  "They're fine. Not bad quality but I expected more given the price point and reviews. They work, but I've had better from other brands at similar price.",
-  "Decent towels. Absorbency is okay but not amazing. They look nice in the bathroom. Might improve after a few more washes — we'll see.",
-  "Average product. Does what it's supposed to do but nothing special stood out to me. Shipping was quick at least.",
+  "It's fine for the price. Does the job but nothing particularly stood out. Shipping was quick which was a plus. Might look at alternatives next time.",
+  "Average product — works but I expected a bit more given the reviews. Might improve with more use. Customer service was helpful when I had questions.",
+  "Decent enough. Not bad quality but not amazing either. It serves its purpose. Would consider buying again if the price drops.",
 ];
 
 function hashString(str: string): number {
@@ -104,7 +107,7 @@ function formatDate(daysAgo: number): string {
 export function generateReviewsForProduct(productId: string, productName: string): ProductReview[] {
   const seed = hashString(productId);
   const rand = seededRandom(seed);
-  const count = 10 + Math.floor(rand() * 11);
+  const count = 12 + Math.floor(rand() * 9);
 
   const reviews: ProductReview[] = [];
 
@@ -140,7 +143,7 @@ export function generateReviewsForProduct(productId: string, productName: string
     }
 
     if (i === 0) {
-      body = body.replace("these", productName.split(" ").slice(-2).join(" ").toLowerCase() || "these");
+      body = `${body.split(".")[0]}. The ${productName.toLowerCase()} specifically has been great — ${body.split(".").slice(1).join(".").trim()}`;
     }
 
     const daysAgo = Math.floor(rand() * 365) + 1;

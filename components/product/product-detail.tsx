@@ -76,7 +76,7 @@ export function ProductDetail({ product }: ProductDetailProps) {
             <div className="mt-6 flex flex-wrap items-center gap-3">
               {hasDiscount ? (
                 <>
-                  <span className="text-3xl font-semibold text-primary">
+                  <span className="text-3xl font-semibold text-accent">
                     {formatPrice(product.salePrice!)}
                   </span>
                   <span className="text-xl text-muted-foreground line-through">
@@ -94,7 +94,7 @@ export function ProductDetail({ product }: ProductDetailProps) {
               <span className="text-sm text-muted-foreground">
                 {product.stock > 0 ? (
                   <span className="flex items-center gap-1.5">
-                    <span className="h-2 w-2 rounded-full bg-green-500" />
+                    <span className="h-2 w-2 rounded-full bg-primary" />
                     {product.stock} in stock
                   </span>
                 ) : (

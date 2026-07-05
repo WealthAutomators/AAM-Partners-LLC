@@ -15,7 +15,7 @@ export function DealsOfTheDay() {
     <section className="py-12 md:py-16">
       <Container>
         <div className="mb-8 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-          <SectionHeading title="Deals of the Day" className="mb-0" />
+          <SectionHeading title="Flash Deals" className="mb-0" />
           <div className="flex items-center gap-3">
             <span className="text-sm font-medium text-muted-foreground">Ends in:</span>
             <CountdownTimer endTime={dealsEndTime} />

@@ -2,37 +2,20 @@ import {
   Feature,
   HeroSlide,
   InstagramPost,
-  ProductSection,
   PromoBanner,
 } from "@/types";
 
 export const heroSlides: HeroSlide[] = [
   {
     id: "1",
-    image: "/hero/hero-1.jpg",
-    headline: "Premium Towels For Every Home",
+    image: "/hero/hero-1.svg",
+    headline: "Everything Your Home Needs, All in One Place.",
     description:
-      "Discover ultra-soft, long-lasting towels crafted from the finest materials for everyday luxury.",
-    ctaText: "Shop Now",
+      "Shop electronics, home essentials, toys, beauty products, kitchen accessories and more at prices you'll love.",
+    ctaText: "Shop Collection",
     ctaLink: "/shop",
-  },
-  {
-    id: "2",
-    image: "/hero/hero-2.jpg",
-    headline: "Summer Beach Collection",
-    description:
-      "Bold colors and quick-dry fabrics designed for sunny days by the water.",
-    ctaText: "Explore Collection",
-    ctaLink: "/categories/beach-towels",
-  },
-  {
-    id: "3",
-    image: "/hero/hero-3.jpg",
-    headline: "Spa-Level Bathrobes",
-    description:
-      "Wrap yourself in plush comfort with our bestselling robe collection.",
-    ctaText: "Shop Bathrobes",
-    ctaLink: "/categories/bathrobes",
+    secondaryCtaText: "Today's Deals",
+    secondaryCtaLink: "/shop?sale=true",
   },
 ];
 
@@ -51,142 +34,119 @@ export const features: Feature[] = [
   },
   {
     id: "3",
-    icon: "award",
-    title: "Quality Guaranteed",
-    description: "Every product is backed by our 30-day satisfaction guarantee.",
+    icon: "rotate",
+    title: "Easy Returns",
+    description: "Hassle-free 30-day returns on most items. We make it simple.",
   },
   {
     id: "4",
     icon: "headphones",
     title: "Customer Support",
-    description: "Our team is available Mon–Fri to help with orders and product questions.",
+    description: "Our friendly team is available Mon–Fri to help with orders and questions.",
+  },
+  {
+    id: "5",
+    icon: "star",
+    title: "Trusted Quality",
+    description: "Every product is carefully selected for quality, value, and reliability.",
   },
 ];
 
 export const dealsEndTime = new Date(Date.now() + 1000 * 60 * 60 * 18).toISOString();
 
-/** Curated product lists — no slug appears twice across homepage sections */
 export const homepageDealsSlugs = [
-  "luxury-cotton-bath-towel-set",
-  "coastal-stripe-beach-towel",
-  "plush-hooded-bathrobe",
-  "monogrammed-gift-set",
+  "wireless-earbuds",
+  "electric-kettle",
+  "air-fryer",
+  "dog-bed",
+  "bath-towel-set",
+  "sunglasses-classic",
 ] as const;
 
 export const homepageBestsellerSlugs = [
-  "organic-bath-sheet",
-  "spa-terry-bath-towel",
-  "premium-hand-towel-set",
-  "microfiber-cleaning-cloth-set",
+  "wireless-earbuds",
+  "bluetooth-speaker",
+  "bath-towel-set",
+  "yoga-mat",
+  "kids-learning-tablet",
+  "coffee-grinder",
+  "dog-bed",
+  "electric-kettle",
 ] as const;
 
 export const homepageFeaturedSlugs = [
-  "quick-dry-bath-towel",
-  "striped-bath-towel-pair",
-  "waffle-knit-robe",
-  "soft-face-cloth-set",
+  "wireless-earbuds",
+  "electric-kettle",
+  "bath-towel-set",
+  "kids-learning-tablet",
+  "standing-desk-lamp",
+  "air-fryer",
+  "yoga-mat",
+  "dog-bed",
+  "coffee-grinder",
+  "bluetooth-speaker",
 ] as const;
 
-export const homepageSectionSlugs: Record<string, readonly string[]> = {
-  "cleaning-towels": [
-    "glass-cleaning-cloths",
-    "cotton-dish-towel-pack",
-    "shop-towel-roll",
-    "exfoliating-face-cloths",
-  ],
-  "beach-towels": [
-    "tropical-print-beach-towel",
-    "compact-travel-beach-towel",
-    "cabana-stripe-beach-towel",
-  ],
-  accessories: [
-    "towel-ladder-rack",
-    "wall-mounted-towel-hooks",
-    "towel-storage-basket",
-  ],
-  "face-towels": ["bamboo-face-towels", "spa-washcloth-trio"],
-};
+export const homepageNewArrivalSlugs = [
+  "stem-robot-kit",
+  "vitamin-c-serum-set",
+  "baby-monitor",
+  "foam-roller",
+] as const;
 
 export const promotionalBanner: PromoBanner = {
   id: "1",
-  title: "Refresh Your Bathroom Essentials",
+  title: "Upgrade Your Everyday Living",
   description:
-    "Save up to 30% on select bath towel sets this week. Limited quantities available while supplies last.",
-  buttonText: "Shop the Sale",
+    "Discover premium products for every room in your home, from smart electronics to comfortable essentials, all in one place.",
+  buttonText: "Shop Deals",
   buttonLink: "/shop?sale=true",
-  image: "/banners/promo-1.jpg",
+  image: "/banners/promo-1.svg",
 };
 
 export const aboutSection = {
-  title: "Crafted For Comfort, Built To Last",
+  title: "Shopping Made Easy.",
   description:
-    "At Otanwa Commerce, we believe everyday essentials should feel exceptional. Our towels are sourced from premium cotton and designed to stay soft wash after wash.",
+    "AAM Partners LLC brings together quality products across multiple categories, helping families find everything they need in one trusted online marketplace. We focus on affordability, reliability, and a smooth shopping experience from browsing to checkout.",
   checklist: [
-    "100% premium long-staple cotton",
-    "OEKO-TEX certified materials",
-    "Ethically sourced manufacturing",
-    "Satisfaction guaranteed or your money back",
+    "Wide selection across 12+ categories",
+    "Competitive prices on everyday essentials",
+    "Fast, reliable shipping nationwide",
+    "Dedicated customer support team",
   ],
   buttonText: "Learn More About Us",
   buttonLink: "/about",
-  image: "/banners/about.jpg",
+  image: "/banners/about.svg",
 };
 
 export const featuredCollection = {
-  title: "The Signature Collection",
+  title: "Featured Products",
   description:
-    "Our most-loved towels, chosen by thousands of customers for their softness, absorbency, and timeless style.",
-  bannerImage: "/banners/featured.jpg",
-  categorySlug: "bath-towels",
+    "Hand-picked favorites across electronics, home, beauty, and more — everything you need in one marketplace.",
+  bannerImage: "/banners/featured.svg",
+  categorySlug: "electronics",
 };
-
-export const productSections: ProductSection[] = [
-  {
-    id: "1",
-    title: "Cleaning Towels",
-    categorySlug: "cleaning-towels",
-    viewMoreLink: "/categories/cleaning-towels",
-  },
-  {
-    id: "2",
-    title: "Beach Towels",
-    categorySlug: "beach-towels",
-    viewMoreLink: "/categories/beach-towels",
-  },
-  {
-    id: "3",
-    title: "Accessories",
-    categorySlug: "accessories",
-    viewMoreLink: "/categories/accessories",
-  },
-  {
-    id: "4",
-    title: "Face Towels",
-    categorySlug: "face-towels",
-    viewMoreLink: "/categories/face-towels",
-  },
-];
 
 export const bestSellerTabs = [
   { label: "All", slug: "all" },
-  { label: "Bath Towels", slug: "bath-towels" },
-  { label: "Bathrobes", slug: "bathrobes" },
-  { label: "Cleaning Towels", slug: "cleaning-towels" },
+  { label: "Electronics", slug: "electronics" },
+  { label: "Home & Kitchen", slug: "home-kitchen" },
+  { label: "Beauty", slug: "beauty" },
+  { label: "Sports", slug: "sports-outdoors" },
 ];
 
 export const instagramPosts: InstagramPost[] = [
-  { id: "1", image: "/instagram/1.jpg", alt: "Folded bath towels on a wooden shelf" },
-  { id: "2", image: "/instagram/2.jpg", alt: "Spa bathroom with soft white linens" },
-  { id: "3", image: "/instagram/3.jpg", alt: "Colorful beach towels by the pool" },
-  { id: "4", image: "/instagram/4.jpg", alt: "Minimal bathroom styling with cotton towels" },
-  { id: "5", image: "/instagram/5.jpg", alt: "Stacked hand towels in neutral tones" },
-  { id: "6", image: "/instagram/6.jpg", alt: "Luxury linen display in a bright bathroom" },
+  { id: "1", image: "/instagram/1.svg", alt: "Wireless earbuds and kitchen appliances on display" },
+  { id: "2", image: "/instagram/2.svg", alt: "Home décor and bathroom essentials styled together" },
+  { id: "3", image: "/instagram/3.svg", alt: "Kids toys and educational products" },
+  { id: "4", image: "/instagram/4.svg", alt: "Beauty and personal care products flat lay" },
+  { id: "5", image: "/instagram/5.svg", alt: "Sports gear and outdoor essentials" },
+  { id: "6", image: "/instagram/6.svg", alt: "Office supplies and fashion accessories" },
 ];
 
 export const newsletter = {
-  title: "Join the Otanwa Community",
-  description:
-    "Subscribe for exclusive offers, new arrivals, and styling inspiration delivered to your inbox.",
+  title: "Get Exclusive Deals Before Everyone Else",
+  description: "Subscribe for discounts, new arrivals, and weekly offers.",
   placeholder: "Enter your email address",
   buttonText: "Subscribe",
 };

@@ -41,6 +41,8 @@ export interface HeroSlide {
   description: string;
   ctaText: string;
   ctaLink: string;
+  secondaryCtaText?: string;
+  secondaryCtaLink?: string;
 }
 
 export interface Feature {

@@ -10,7 +10,7 @@ export function AboutSection() {
     <section className="py-12 md:py-16">
       <Container>
         <div className="grid items-center gap-10 md:grid-cols-2 lg:gap-16">
-          <div className="relative aspect-[4/3] overflow-hidden rounded-xl border border-border">
+          <div className="relative aspect-[4/3] overflow-hidden rounded-xl border border-border shadow-sm">
             <Image
               src={aboutSection.image}
               alt={aboutSection.title}

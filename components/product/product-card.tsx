@@ -46,8 +46,9 @@ export const ProductCard = memo(function ProductCard({ product, className }: Pro
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.4 }}
+        whileHover={{ y: -4 }}
       >
-        <div className="relative aspect-[4/5] overflow-hidden rounded-lg border border-border bg-muted">
+        <div className="relative aspect-[4/5] overflow-hidden rounded-xl border border-border bg-muted shadow-sm transition-shadow duration-300 group-hover:shadow-lg">
           <Link href={`/product/${product.slug}`} className="block h-full w-full">
             <Image
               src={product.images[0]}
@@ -139,7 +140,7 @@ export const ProductCard = memo(function ProductCard({ product, className }: Pro
           <div className="mt-auto flex items-center gap-2">
             {hasDiscount ? (
               <>
-                <span className="text-sm font-semibold text-primary">{formatPrice(product.salePrice!)}</span>
+                <span className="text-sm font-semibold text-accent">{formatPrice(product.salePrice!)}</span>
                 <span className="text-sm text-muted-foreground line-through">{formatPrice(product.price)}</span>
               </>
             ) : (
